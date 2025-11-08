@@ -2,6 +2,10 @@
 
 All notable changes to the "Project Library" extension will be documented in this file.
 
+## [1.0.4]
+
+- Increased resolution of icon images
+
 ## [1.0.3]
 
 - Changed [README.md](README.md)
