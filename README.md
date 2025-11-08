@@ -1,5 +1,3 @@
-![Project Library Logo](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/images/icon.png)
-
 # *Project Library*
 
 [![Version](https://img.shields.io/visual-studio-marketplace/v/philbschmidt.project-library?style=for-the-badge&cacheSeconds=21600)](https://marketplace.visualstudio.com/items?itemName=philbschmidt.project-library) [![Installs](https://img.shields.io/visual-studio-marketplace/i/philbschmidt.project-library?style=for-the-badge&cacheSeconds=21600)](https://marketplace.visualstudio.com/items?itemName=philbschmidt.project-library) [![Downloads](https://img.shields.io/visual-studio-marketplace/d/philbschmidt.project-library?style=for-the-badge&label=Downloads&cacheSeconds=21600)](https://marketplace.visualstudio.com/items?itemName=philbschmidt.project-library)

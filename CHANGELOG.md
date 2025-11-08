@@ -2,6 +2,12 @@
 
 All notable changes to the "Project Library" extension will be documented in this file.
 
+## [1.0.3]
+
+- Changed [README.md](README.md)
+    - Removed project library icon
+    - Updated .gifs to include new sidebar icon
+
 ## [1.0.2]
 
 - Changed project library icon
