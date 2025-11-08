@@ -4,3 +4,6 @@ node_modules
 media/videos/
 src/
 tsconfig.json
+**/*.ts
+**/*.map
+.vscode-test/**

@@ -68,9 +68,3 @@ Contributions are welcome! Please feel free to submit issues or pull requests on
 ## License
 
 This extension is licensed under the [MIT License](LICENSE).
-
-## Support
-
-- **Report Issues**: [GitHub Issues](https://github.com/philbschmidt/Project-Master/issues)
-- **Contact**: phillip.jucky@gmail.com
-- **Rate & Review**: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=philbschmidt.vscode-project-library)
