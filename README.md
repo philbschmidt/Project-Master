@@ -22,18 +22,18 @@
 
 1. Open the folder or workspace you want to save
 2. Click the Project Library icon in the sidebar
-![sidebar icon](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/images/sidebar-icon-readme.png)
+![sidebar icon](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/images/sidebar-icon-readme.webp)
 3. Click the **"Add Project"** button in the tree view toolbar
 4. Enter a name for your project
 5. Optionally select a category (or leave at Root)
-![add project readme](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/add-project-readme.mp4)
+![add project readme](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/add-project-readme.webp)
 
 ### Creating Categories
 
 1. Click the **"Add Category"** button in the tree view toolbar
 2. Enter a category name
 3. Categories can be nested by right-clicking on an existing category and selecting "Add Category"
-![add category readme](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/add-category-readme.mp4)
+![add category readme](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/add-category-readme.webp)
 
 ### Opening Projects
 
@@ -46,7 +46,7 @@ Right-click on any project or category to:
 - **Edit** - Rename or move to different category
 - **Delete** - Remove entry (deleting a category moves projects to Root)
 - **Add Project/Category** - Add new entries within the selected category
-![managing entries](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/managing-entries-readme.mp4)
+![managing entries](https://github.com/philbschmidt/Project-Master/raw/HEAD/media/videos/managing-entries-readme.webp)
 
 ## Data Storage
 
