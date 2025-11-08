@@ -10,10 +10,10 @@ export function activate(context: vscode.ExtensionContext) {
     extensionContext = context;
     treeDataProvider = new TreeDataProvider();
 
-    vscode.window.registerTreeDataProvider('projectMasterTreeView', treeDataProvider);
+    vscode.window.registerTreeDataProvider('projectLibraryTreeView', treeDataProvider);
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.addProject', (item?: any) => {
+        vscode.commands.registerCommand('project-library.addProject', (item?: any) => {
             let parentCategoryId: number | undefined = undefined;
             if (item && typeof item === 'object') {
                 if ('category' in item && item.category) {
@@ -27,7 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.addCategory', (item?: any) => {
+        vscode.commands.registerCommand('project-library.addCategory', (item?: any) => {
             let parentCategoryId: number = 0;
 
             if (item && typeof item === 'object') {
@@ -43,19 +43,19 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.addCategoryRoot', () => {
+        vscode.commands.registerCommand('project-library.addCategoryRoot', () => {
             createCategoryEntry(0);
         })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.collapseAll', () => {
-            vscode.commands.executeCommand('workbench.actions.treeView.projectMasterTreeView.collapseAll');
+        vscode.commands.registerCommand('project-library.collapseAll', () => {
+            vscode.commands.executeCommand('workbench.actions.treeView.projectLibraryTreeView.collapseAll');
         })
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.editEntry', (item) => {
+        vscode.commands.registerCommand('project-library.editEntry', (item) => {
             if (item.category !== undefined) {
                 editCategoryEntry(item.category._id);
             } else if (item.project !== undefined) {
@@ -65,7 +65,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.deleteEntry', (item) => {
+        vscode.commands.registerCommand('project-library.deleteEntry', (item) => {
             if (item.category !== undefined) {
                 Category.deleteById(item.category._id);
                 treeDataProvider.refresh();
@@ -77,7 +77,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.openInNewWindow', (item) => {
+        vscode.commands.registerCommand('project-library.openInNewWindow', (item) => {
             if (item.project === undefined) {
                 vscode.window.showErrorMessage('No project selected.');
                 return;
@@ -100,7 +100,7 @@ export function activate(context: vscode.ExtensionContext) {
     );
 
     context.subscriptions.push(
-        vscode.commands.registerCommand('project-master.openInCurrentWindow', (arg) => {
+        vscode.commands.registerCommand('project-library.openInCurrentWindow', (arg) => {
             let project: Project | undefined;
             if (arg && typeof arg === 'object' && 'project' in arg && arg.project) {
                 project = Project.getOneById(arg.project._id);

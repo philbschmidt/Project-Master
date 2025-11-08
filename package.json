@@ -1,6 +1,6 @@
 {
-    "name": "vscode-project-master",
-    "displayName": "Project Master",
+    "name": "project-library",
+    "displayName": "Project Library",
     "description": "A project manager that lets you save and organize your projects in a tree structure.",
     "version": "1.0.0",
     "publisher": "philbschmidt",
@@ -31,8 +31,8 @@
     ],
     "keywords": [
         "project",
+        "library",
         "manager",
-        "master",
         "git",
         "folder",
         "workspace",
@@ -49,142 +49,142 @@
     "contributes": {
         "commands": [
             {
-                "command": "project-master.addProject",
+                "command": "project-library.addProject",
                 "title": "Add Project",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(new-folder)"
             },
             {
-                "command": "project-master.addCategory",
+                "command": "project-library.addCategory",
                 "title": "Add Category",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(new-collection)"
             },
             {
-                "command": "project-master.addCategoryRoot",
+                "command": "project-library.addCategoryRoot",
                 "title": "Add Root Category",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(new-collection)"
             },
             {
-                "command": "project-master.editEntry",
+                "command": "project-library.editEntry",
                 "title": "Edit Entry",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(edit)"
             },
             {
-                "command": "project-master.deleteEntry",
+                "command": "project-library.deleteEntry",
                 "title": "Delete Entry",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(trash)"
             },
             {
-                "command": "project-master.openInNewWindow",
+                "command": "project-library.openInNewWindow",
                 "title": "Open in New Window",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(window)"
             },
             {
-                "command": "project-master.openInCurrentWindow",
+                "command": "project-library.openInCurrentWindow",
                 "title": "Open in Current Window",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(folder-opened)"
             },
             {
-                "command": "project-master.collapseAll",
+                "command": "project-library.collapseAll",
                 "title": "Collapse All",
-                "category": "Project Master",
+                "category": "Project Library",
                 "icon": "$(collapse-all)"
             }
         ],
         "menus": {
             "commandPalette": [
                 {
-                    "command": "project-master.addCategory",
+                    "command": "project-library.addCategory",
                     "when": "false"
                 },
                 {
-                    "command": "project-master.editEntry",
+                    "command": "project-library.editEntry",
                     "when": "false"
                 },
                 {
-                    "command": "project-master.deleteEntry",
+                    "command": "project-library.deleteEntry",
                     "when": "false"
                 },
                 {
-                    "command": "project-master.openInNewWindow",
+                    "command": "project-library.openInNewWindow",
                     "when": "false"
                 },
                 {
-                    "command": "project-master.openInCurrentWindow",
+                    "command": "project-library.openInCurrentWindow",
                     "when": "false"
                 }
             ],
             "view/title": [
                 {
-                    "command": "project-master.addCategoryRoot",
-                    "when": "view == projectMasterTreeView",
+                    "command": "project-library.addCategoryRoot",
+                    "when": "view == projectLibraryTreeView",
                     "group": "navigation@1"
                 },
                 {
-                    "command": "project-master.addProject",
-                    "when": "view == projectMasterTreeView",
+                    "command": "project-library.addProject",
+                    "when": "view == projectLibraryTreeView",
                     "group": "navigation@2"
                 },
                 {
-                    "command": "project-master.collapseAll",
-                    "when": "view == projectMasterTreeView",
+                    "command": "project-library.collapseAll",
+                    "when": "view == projectLibraryTreeView",
                     "group": "navigation@3"
                 }
             ],
             "view/item/context": [
                 {
-                    "command": "project-master.openInNewWindow",
-                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "command": "project-library.openInNewWindow",
+                    "when": "view == projectLibraryTreeView && viewItem == project",
                     "group": "inline"
                 },
                 {
-                    "command": "project-master.openInCurrentWindow",
-                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "command": "project-library.openInCurrentWindow",
+                    "when": "view == projectLibraryTreeView && viewItem == project",
                     "group": "navigation"
                 },
                 {
-                    "command": "project-master.addCategory",
-                    "when": "view == projectMasterTreeView && viewItem == category",
+                    "command": "project-library.addCategory",
+                    "when": "view == projectLibraryTreeView && viewItem == category",
                     "group": "navigation@1"
                 },
                 {
-                    "command": "project-master.addCategory",
-                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "command": "project-library.addCategory",
+                    "when": "view == projectLibraryTreeView && viewItem == project",
                     "group": "navigation@1"
                 },
                 {
-                    "command": "project-master.addProject",
-                    "when": "view == projectMasterTreeView && viewItem == category",
+                    "command": "project-library.addProject",
+                    "when": "view == projectLibraryTreeView && viewItem == category",
                     "group": "navigation@2"
                 },
                 {
-                    "command": "project-master.addProject",
-                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "command": "project-library.addProject",
+                    "when": "view == projectLibraryTreeView && viewItem == project",
                     "group": "navigation@2"
                 },
                 {
-                    "command": "project-master.editEntry",
-                    "when": "view == projectMasterTreeView",
+                    "command": "project-library.editEntry",
+                    "when": "view == projectLibraryTreeView",
                     "group": "navigation@3"
                 },
                 {
-                    "command": "project-master.deleteEntry",
-                    "when": "view == projectMasterTreeView",
+                    "command": "project-library.deleteEntry",
+                    "when": "view == projectLibraryTreeView",
                     "group": "navigation@4"
                 }
             ]
         },
         "views": {
-            "philbschmidt-project-master": [
+            "philbschmidt-project-library": [
                 {
-                    "id": "projectMasterTreeView",
-                    "name": "Project Master",
+                    "id": "projectLibraryTreeView",
+                    "name": "Project Library",
                     "icon": "$(list-tree)"
                 }
             ]
@@ -192,8 +192,8 @@
         "viewsContainers": {
             "activitybar": [
                 {
-                    "id": "philbschmidt-project-master",
-                    "title": "Project Master",
+                    "id": "philbschmidt-project-library",
+                    "title": "Project Library",
                     "icon": "media/images/sidebar-icon.png"
                 }
             ]

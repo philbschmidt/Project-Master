@@ -34,7 +34,7 @@ export class TreeItem extends vscode.TreeItem {
 
             this.contextValue = 'project';
             this.command = {
-                command: 'project-master.openInCurrentWindow',
+                command: 'project-library.openInCurrentWindow',
                 title: 'Open Project',
                 arguments: [this]
             };
