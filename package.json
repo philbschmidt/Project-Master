@@ -1,0 +1,212 @@
+{
+    "name": "project-master",
+    "displayName": "Project Master",
+    "description": "A project manager that lets you save and organize your projects in a tree structure.",
+    "version": "1.0.0",
+    "publisher": "philbschmidt",
+    "license": "MIT",
+    "icon": "media/images/icon.png",
+    "author": {
+        "name": "Philipp Schmidt",
+        "email": "phillip.jucky@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/philbschmidt/Project-Master"
+    },
+    "bugs": {
+        "url": "https://github.com/philbschmidt/Project-Master/issues",
+        "email": "phillip.jucky@gmail.com"
+    },
+    "homepage": "https://github.com/philbschmidt/Project-Master/blob/master/README.md/#readme",
+    "galleryBanner": {
+        "color": "#3b3e50",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.84.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "project",
+        "manager",
+        "master",
+        "git",
+        "folder",
+        "workspace",
+        "organize",
+        "manage",
+        "switch",
+        "tree"
+    ],
+    "extensionKind": [
+        "ui",
+        "workspace"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "project-master.addProject",
+                "title": "Add Project",
+                "category": "Project Master",
+                "icon": "$(new-folder)"
+            },
+            {
+                "command": "project-master.addCategory",
+                "title": "Add Category",
+                "category": "Project Master",
+                "icon": "$(new-collection)"
+            },
+            {
+                "command": "project-master.addCategoryRoot",
+                "title": "Add Root Category",
+                "category": "Project Master",
+                "icon": "$(new-collection)"
+            },
+            {
+                "command": "project-master.editEntry",
+                "title": "Edit Entry",
+                "category": "Project Master",
+                "icon": "$(edit)"
+            },
+            {
+                "command": "project-master.deleteEntry",
+                "title": "Delete Entry",
+                "category": "Project Master",
+                "icon": "$(trash)"
+            },
+            {
+                "command": "project-master.openInNewWindow",
+                "title": "Open in New Window",
+                "category": "Project Master",
+                "icon": "$(window)"
+            },
+            {
+                "command": "project-master.openInCurrentWindow",
+                "title": "Open in Current Window",
+                "category": "Project Master",
+                "icon": "$(folder-opened)"
+            },
+            {
+                "command": "project-master.collapseAll",
+                "title": "Collapse All",
+                "category": "Project Master",
+                "icon": "$(collapse-all)"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "project-master.addCategory",
+                    "when": "false"
+                },
+                {
+                    "command": "project-master.editEntry",
+                    "when": "false"
+                },
+                {
+                    "command": "project-master.deleteEntry",
+                    "when": "false"
+                },
+                {
+                    "command": "project-master.openInNewWindow",
+                    "when": "false"
+                },
+                {
+                    "command": "project-master.openInCurrentWindow",
+                    "when": "false"
+                }
+            ],
+            "view/title": [
+                {
+                    "command": "project-master.addCategoryRoot",
+                    "when": "view == projectMasterTreeView",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "project-master.addProject",
+                    "when": "view == projectMasterTreeView",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "project-master.collapseAll",
+                    "when": "view == projectMasterTreeView",
+                    "group": "navigation@3"
+                }
+            ],
+            "view/item/context": [
+                {
+                    "command": "project-master.openInNewWindow",
+                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "group": "inline"
+                },
+                {
+                    "command": "project-master.openInCurrentWindow",
+                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "group": "navigation"
+                },
+                {
+                    "command": "project-master.addCategory",
+                    "when": "view == projectMasterTreeView && viewItem == category",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "project-master.addCategory",
+                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "group": "navigation@1"
+                },
+                {
+                    "command": "project-master.addProject",
+                    "when": "view == projectMasterTreeView && viewItem == category",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "project-master.addProject",
+                    "when": "view == projectMasterTreeView && viewItem == project",
+                    "group": "navigation@2"
+                },
+                {
+                    "command": "project-master.editEntry",
+                    "when": "view == projectMasterTreeView",
+                    "group": "navigation@3"
+                },
+                {
+                    "command": "project-master.deleteEntry",
+                    "when": "view == projectMasterTreeView",
+                    "group": "navigation@4"
+                }
+            ]
+        },
+        "views": {
+            "philbschmidt-project-master": [
+                {
+                    "id": "projectMasterTreeView",
+                    "name": "Project Master",
+                    "icon": "$(list-tree)"
+                }
+            ]
+        },
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "philbschmidt-project-master",
+                    "title": "Project Master",
+                    "icon": "media/images/sidebar-icon.png"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.0",
+        "@types/vscode": "^1.84.0",
+        "typescript": "^5.9.3"
+    }
+}
