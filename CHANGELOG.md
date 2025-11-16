@@ -2,6 +2,10 @@
 
 All notable changes to the "Project Library" extension will be documented in this file.
 
+## [1.1.2] - 2025-11-16
+
+- Updated videos and screenshots
+
 ## [1.1.1] - 2025-11-15
 
 - Replaced sidebar icon with .spg file
